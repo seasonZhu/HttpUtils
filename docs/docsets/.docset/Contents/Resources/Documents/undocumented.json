@@ -1,0 +1,376 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+Config.swift",
+      "line": 11,
+      "symbol": "ConfigProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+Config.swift",
+      "line": 12,
+      "symbol": "ConfigProtocol.keyPath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+Config.swift",
+      "line": 14,
+      "symbol": "ConfigProtocol.queue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+Config.swift",
+      "line": 16,
+      "symbol": "ConfigProtocol.statusCodes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+Config.swift",
+      "line": 18,
+      "symbol": "ConfigProtocol.contentTypes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+Config.swift",
+      "line": 22,
+      "symbol": "Adapter.Config",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+HUD.swift",
+      "line": 11,
+      "symbol": "HUDProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+HUD.swift",
+      "line": 13,
+      "symbol": "HUDProtocol.waitMessage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+HUD.swift",
+      "line": 15,
+      "symbol": "HUDProtocol.successMessage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+HUD.swift",
+      "line": 17,
+      "symbol": "HUDProtocol.errorMessage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+HUD.swift",
+      "line": 19,
+      "symbol": "HUDProtocol.showWait()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+HUD.swift",
+      "line": 21,
+      "symbol": "HUDProtocol.showNetworkStatus(status:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+HUD.swift",
+      "line": 23,
+      "symbol": "HUDProtocol.showError(error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+HUD.swift",
+      "line": 25,
+      "symbol": "HUDProtocol.showMessage(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+HUD.swift",
+      "line": 27,
+      "symbol": "HUDProtocol.clear()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+HUD.swift",
+      "line": 31,
+      "symbol": "Adapter.HUD",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+Process.swift",
+      "line": 11,
+      "symbol": "ProcessProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+Process.swift",
+      "line": 13,
+      "symbol": "ProcessProtocol.isNotReachableHandler",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+Process.swift",
+      "line": 15,
+      "symbol": "ProcessProtocol.isBeforeHandler",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+Process.swift",
+      "line": 17,
+      "symbol": "ProcessProtocol.isAfterHandler",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+Process.swift",
+      "line": 19,
+      "symbol": "ProcessProtocol.isUseCache",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/Adapter+Process.swift",
+      "line": 23,
+      "symbol": "Adapter.Process",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/HttpConfig.swift",
+      "line": 80,
+      "symbol": "HttpConfig.Builder.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/HttpUtil+CacheManager.swift",
+      "line": null,
+      "symbol": "HttpUtils.CacheManager",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/HttpUtil+CacheManager.swift",
+      "line": 14,
+      "symbol": "HttpUtils.CacheManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/HttpUtil+OtherError.swift",
+      "line": 19,
+      "symbol": "HttpUtils.OtherError.networkNotReachable",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/HttpUtil+OtherError.swift",
+      "line": 20,
+      "symbol": "HttpUtils.OtherError.writeJSONCacheFailed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/HttpUtil+OtherError.swift",
+      "line": 21,
+      "symbol": "HttpUtils.OtherError.readJSONCacheFailed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/HttpUtil+OtherError.swift",
+      "line": 22,
+      "symbol": "HttpUtils.OtherError.writeDownloadResumeDataFailed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/HttpUtils.swift",
+      "line": 441,
+      "symbol": "DownloadRequestTask",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/HttpUtils.swift",
+      "line": 445,
+      "symbol": "HttpUtils.downloadRequestTask",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/HttpsTrustPolicy.swift",
+      "line": 39,
+      "symbol": "HttpsServerTrustPolicy.performDefaultEvaluation(validateHost:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/HttpsTrustPolicy.swift",
+      "line": 40,
+      "symbol": "HttpsServerTrustPolicy.performRevokedEvaluation(validateHost:revocationFlags:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/HttpsTrustPolicy.swift",
+      "line": 41,
+      "symbol": "HttpsServerTrustPolicy.pinCertificates(cerPath:validateCertificateChain:validateHost:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/HttpsTrustPolicy.swift",
+      "line": 42,
+      "symbol": "HttpsServerTrustPolicy.pinPublicKeys(cerPath:validateCertificateChain:validateHost:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/HttpsTrustPolicy.swift",
+      "line": 43,
+      "symbol": "HttpsServerTrustPolicy.disableEvaluation",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/HttpsTrustPolicy.swift",
+      "line": 44,
+      "symbol": "HttpsServerTrustPolicy.customEvaluation(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/MimeType.swift",
+      "line": 17,
+      "symbol": "MimeType.image(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/MimeType.swift",
+      "line": 18,
+      "symbol": "MimeType.gif(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/MimeType.swift",
+      "line": 19,
+      "symbol": "MimeType.video(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/NetworkListener.swift",
+      "line": 19,
+      "symbol": "NetworkType.unknown",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/NetworkListener.swift",
+      "line": 20,
+      "symbol": "NetworkType.notReachable",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/NetworkListener.swift",
+      "line": 21,
+      "symbol": "NetworkType.wifi",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/NetworkListener.swift",
+      "line": 22,
+      "symbol": "NetworkType.mobile",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/NetworkLogger.swift",
+      "line": 22,
+      "symbol": "NetworkLoggerLevel.off",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/NetworkLogger.swift",
+      "line": 23,
+      "symbol": "NetworkLoggerLevel.debug",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/NetworkLogger.swift",
+      "line": 24,
+      "symbol": "NetworkLoggerLevel.info",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/NetworkLogger.swift",
+      "line": 25,
+      "symbol": "NetworkLoggerLevel.warn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/NetworkLogger.swift",
+      "line": 26,
+      "symbol": "NetworkLoggerLevel.error",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/NetworkLogger.swift",
+      "line": 27,
+      "symbol": "NetworkLoggerLevel.fatal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/NetworkLogger.swift",
+      "line": 37,
+      "symbol": "NetworkLogger.isLogging",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/ResponseResult.swift",
+      "line": 19,
+      "symbol": "ResponseResult.success(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/season/Documents/Swift Git/HttpUtilsDemo/HttpUtils/ResponseResult.swift",
+      "line": 20,
+      "symbol": "ResponseResult.failure(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/season/Documents/Swift Git/HttpUtilsDemo"
+}

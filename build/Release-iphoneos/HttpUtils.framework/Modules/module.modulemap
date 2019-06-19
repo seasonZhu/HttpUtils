@@ -1,0 +1,11 @@
+framework module HttpUtils {
+  umbrella header "HttpUtils.h"
+
+  export *
+  module * { export * }
+}
+
+module HttpUtils.Swift {
+    header "HttpUtils-Swift.h"
+    requires objc
+}

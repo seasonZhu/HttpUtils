@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NetworkListener Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/NetworkListener" class="dashAnchor"></a>
+    <a title="NetworkListener Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (75% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        NetworkListener Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DownloadCallbackHandler.html">DownloadCallbackHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpConfig.html">HttpConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpConfig/Builder.html">– Builder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpUtils.html">HttpUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpUtils/CacheManager.html">– CacheManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpUtils/OtherError.html">– OtherError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkListener.html">NetworkListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkLogger.html">NetworkLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RequestUtils.html">RequestUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TrustPolicyManager.html">TrustPolicyManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UploadCallbackHandler.html">UploadCallbackHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/HttpsServerTrustPolicy.html">HttpsServerTrustPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MimeType.html">MimeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NetworkLoggerLevel.html">NetworkLoggerLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NetworkType.html">NetworkType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ResponseResult.html">ResponseResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ResponseResult/Success.html">– Success</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ResponseResult/Failure.html">– Failure</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/DataRequest.html">DataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ConfigProtocol.html">ConfigProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HUDProtocol.html">HUDProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ProcessProtocol.html">ProcessProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Adapter.html">Adapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Adapter/Config.html">– Config</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Adapter/HUD.html">– HUD</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Adapter/Process.html">– Process</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils23DownloadFailureCallbacka">DownloadFailureCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils24DownloadProgressCallbacka">DownloadProgressCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils19DownloadRequestTaska">DownloadRequestTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils23DownloadSuccessCallbacka">DownloadSuccessCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils20ResponseResultHandlea">ResponseResultHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils22UploadProgressCallbacka">UploadProgressCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils20UploadResultCallbacka">UploadResultCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils12UploadStreama">UploadStream</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>NetworkListener</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NetworkListener</span></code></pre>
+
+                </div>
+              </div>
+            <p>网络监听器</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils15NetworkListenerC6sharedACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils15NetworkListenerC6sharedACvpZ">shared</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>单例</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">NetworkListener</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils15NetworkListenerC11isReachableSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isReachable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils15NetworkListenerC11isReachableSbvp">isReachable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>是否有网络</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isReachable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils15NetworkListenerC8isMobileSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isMobile" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils15NetworkListenerC8isMobileSbvp">isMobile</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>是否是手机信号</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isMobile</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils15NetworkListenerC6isWifiSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isWifi" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils15NetworkListenerC6isWifiSbvp">isWifi</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>是否是wifi信号</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isWifi</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils15NetworkListenerC11startListenyyF"></a>
+                    <a name="//apple_ref/swift/Method/startListen()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils15NetworkListenerC11startListenyyF">startListen()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>开始监听</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startListen</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils15NetworkListenerC10stopListenyyF"></a>
+                    <a name="//apple_ref/swift/Method/stopListen()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils15NetworkListenerC10stopListenyyF">stopListen()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>结束监听</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopListen</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils15NetworkListenerC6statusAA0C4TypeOvp"></a>
+                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils15NetworkListenerC6statusAA0C4TypeOvp">status</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>获取监听的网络状态</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../Enums/NetworkType.html">NetworkType</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils15NetworkListenerC13refreshStatusAA0C4TypeOyF"></a>
+                    <a name="//apple_ref/swift/Method/refreshStatus()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils15NetworkListenerC13refreshStatusAA0C4TypeOyF">refreshStatus()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>刷新网络状态</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">refreshStatus</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/NetworkType.html">NetworkType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>网络状态</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils15NetworkListenerC12listenStatusyyyAA0C4TypeOcF"></a>
+                    <a name="//apple_ref/swift/Method/listenStatus(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils15NetworkListenerC12listenStatusyyyAA0C4TypeOcF">listenStatus(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>获取网络状态,一旦改变就会进行回调,可以说是全局的监听</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listenStatus</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/NetworkType.html">NetworkType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>回调</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-06-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

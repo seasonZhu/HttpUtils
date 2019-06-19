@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RequestUtils Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/RequestUtils" class="dashAnchor"></a>
+    <a title="RequestUtils Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (75% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        RequestUtils Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DownloadCallbackHandler.html">DownloadCallbackHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpConfig.html">HttpConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpConfig/Builder.html">– Builder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpUtils.html">HttpUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpUtils/CacheManager.html">– CacheManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpUtils/OtherError.html">– OtherError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkListener.html">NetworkListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkLogger.html">NetworkLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RequestUtils.html">RequestUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TrustPolicyManager.html">TrustPolicyManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UploadCallbackHandler.html">UploadCallbackHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/HttpsServerTrustPolicy.html">HttpsServerTrustPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MimeType.html">MimeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NetworkLoggerLevel.html">NetworkLoggerLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NetworkType.html">NetworkType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ResponseResult.html">ResponseResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ResponseResult/Success.html">– Success</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ResponseResult/Failure.html">– Failure</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/DataRequest.html">DataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ConfigProtocol.html">ConfigProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HUDProtocol.html">HUDProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ProcessProtocol.html">ProcessProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Adapter.html">Adapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Adapter/Config.html">– Config</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Adapter/HUD.html">– HUD</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Adapter/Process.html">– Process</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils23DownloadFailureCallbacka">DownloadFailureCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils24DownloadProgressCallbacka">DownloadProgressCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils19DownloadRequestTaska">DownloadRequestTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils23DownloadSuccessCallbacka">DownloadSuccessCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils20ResponseResultHandlea">ResponseResultHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils22UploadProgressCallbacka">UploadProgressCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils20UploadResultCallbacka">UploadResultCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils12UploadStreama">UploadStream</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>RequestUtils</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">RequestUtils</span></code></pre>
+
+                </div>
+              </div>
+            <p>网络请求RequestUtils</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils07RequestB0C7defaultACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/default" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils07RequestB0C7defaultACvpZ">default</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>默认的网络请求实体</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">let</span> <span class="err">`</span><span class="k">default</span><span class="err">`</span><span class="p">:</span> <span class="kt">RequestUtils</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils07RequestB0C10httpConfigAcA0aE0C_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(httpConfig:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils07RequestB0C10httpConfigAcA0aE0C_tcfc">init(httpConfig:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>自定义的初始化方法
+对外</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">httpConfig</span><span class="p">:</span> <span class="kt"><a href="../Classes/HttpConfig.html">HttpConfig</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>HttpConfig</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求参数设置</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95,%E5%9B%9E%E8%B0%83%E4%B8%BA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"></a>
+                <a name="//apple_ref/swift/Section/请求方法,回调为基本数据类型" class="dashAnchor"></a>
+                <a href="#/%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95,%E5%9B%9E%E8%B0%83%E4%B8%BA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">
+                  <h3 class="section-name">请求方法,回调为基本数据类型</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils07RequestB0C7requestyyXe_XeXeAA7AdapterVyAA14ResponseResultOyxGctcACSeRzSERzlF"></a>
+                    <a name="//apple_ref/swift/Method/request(method:url:parameters:adapter:responseResultHandle:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils07RequestB0C7requestyyXe_XeXeAA7AdapterVyAA14ResponseResultOyxGctcACSeRzSERzlF">request(method:url:parameters:adapter:responseResultHandle:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>基本请求</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">request</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">Codable</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">method</span><span class="p">:</span> <span class="kt">HTTPMethod</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URLConvertible</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">adapter</span><span class="p">:</span> <span class="kt"><a href="../Structs/Adapter.html">Adapter</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/Adapter.html">Adapter</a></span><span class="o">.</span><span class="k">default</span><span class="p">,</span> <span class="nv">responseResultHandle</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:9HttpUtils20ResponseResultHandlea">ResponseResultHandle</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求方式</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求网址</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求参数</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>interceptHandle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>拦截回调</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callbackHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>结果回调</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils07RequestB0C3getyyXe_XeAA7AdapterVyAA14ResponseResultOyxGctcACSeRzSERzlF"></a>
+                    <a name="//apple_ref/swift/Method/get(url:parameters:adapter:responseResultHandle:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils07RequestB0C3getyyXe_XeAA7AdapterVyAA14ResponseResultOyxGctcACSeRzSERzlF">get(url:parameters:adapter:responseResultHandle:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>get请求</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="k">get</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">Codable</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URLConvertible</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">adapter</span><span class="p">:</span> <span class="kt"><a href="../Structs/Adapter.html">Adapter</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/Adapter.html">Adapter</a></span><span class="o">.</span><span class="k">default</span><span class="p">,</span> <span class="nv">responseResultHandle</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:9HttpUtils20ResponseResultHandlea">ResponseResultHandle</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求网址</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求参数</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>interceptHandle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>拦截回调</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callbackHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>结果回调</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils07RequestB0C4postyyXe_XeAA7AdapterVyAA14ResponseResultOyxGctcACSeRzSERzlF"></a>
+                    <a name="//apple_ref/swift/Method/post(url:parameters:adapter:responseResultHandle:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils07RequestB0C4postyyXe_XeAA7AdapterVyAA14ResponseResultOyxGctcACSeRzSERzlF">post(url:parameters:adapter:responseResultHandle:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>post请求</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">post</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">Codable</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URLConvertible</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">adapter</span><span class="p">:</span> <span class="kt"><a href="../Structs/Adapter.html">Adapter</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/Adapter.html">Adapter</a></span><span class="o">.</span><span class="k">default</span><span class="p">,</span> <span class="nv">responseResultHandle</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:9HttpUtils20ResponseResultHandlea">ResponseResultHandle</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求网址</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求参数</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>interceptHandle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>拦截回调</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callbackHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>结果回调</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E8%AF%B7%E6%B1%82"></a>
+                <a name="//apple_ref/swift/Section/文件上传请求" class="dashAnchor"></a>
+                <a href="#/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E8%AF%B7%E6%B1%82">
+                  <h3 class="section-name">文件上传请求</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils07RequestB0C6uploadyyXe_SDySS10Foundation4DataVGXeSo6CGSizeVSgAA8MimeTypeOAA21UploadCallbackHandlerCtcACF"></a>
+                    <a name="//apple_ref/swift/Method/upload(url:uploadStream:parameters:size:mimeType:callbackHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils07RequestB0C6uploadyyXe_SDySS10Foundation4DataVGXeSo6CGSizeVSgAA8MimeTypeOAA21UploadCallbackHandlerCtcACF">upload(url:uploadStream:parameters:size:mimeType:callbackHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>上传请求</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URLConvertible</span><span class="p">,</span>
+                   <span class="nv">uploadStream</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:9HttpUtils12UploadStreama">UploadStream</a></span><span class="p">,</span>
+                   <span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                   <span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                   <span class="nv">mimeType</span><span class="p">:</span> <span class="kt"><a href="../Enums/MimeType.html">MimeType</a></span><span class="p">,</span>
+                   <span class="nv">callbackHandler</span><span class="p">:</span> <span class="kt"><a href="../Classes/UploadCallbackHandler.html">UploadCallbackHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求网址</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uploadStream</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>上传的数据流</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求参数</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>size</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>文件的长宽</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mimeType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>文件类型</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callbackHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>结果回调</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils07RequestB0C19uploadFromeFilePathyySS_XeXeXeAA21UploadCallbackHandlerCtcACF"></a>
+                    <a name="//apple_ref/swift/Method/uploadFromeFilePath(filePath:to:method:headers:callbackHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils07RequestB0C19uploadFromeFilePathyySS_XeXeXeAA21UploadCallbackHandlerCtcACF">uploadFromeFilePath(filePath:to:method:headers:callbackHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>文件路径上传</p>
+
+                        <a href="../Classes/RequestUtils/uploadFromeFilePath(filePath:to:method:headers:callbackHandler:).html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">uploadFromeFilePath</span><span class="p">(</span><span class="nv">filePath</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                                <span class="n">to</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URLConvertible</span><span class="p">,</span>
+                                <span class="nv">method</span><span class="p">:</span> <span class="kt">HTTPMethod</span> <span class="o">=</span> <span class="o">.</span><span class="n">post</span><span class="p">,</span>
+                                <span class="nv">headers</span><span class="p">:</span> <span class="kt">HTTPHeaders</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                <span class="nv">callbackHandler</span><span class="p">:</span> <span class="kt"><a href="../Classes/UploadCallbackHandler.html">UploadCallbackHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filePath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>文件路径</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求网址</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求方式,默认是post</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求头</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callbackHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>上传回调</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E8%AF%B7%E6%B1%82"></a>
+                <a name="//apple_ref/swift/Section/文件下载请求" class="dashAnchor"></a>
+                <a href="#/%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E8%AF%B7%E6%B1%82">
+                  <h3 class="section-name">文件下载请求</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils07RequestB0C8downloadyXeXe_XeAA23DownloadCallbackHandlerCtcACF"></a>
+                    <a name="//apple_ref/swift/Method/download(url:parameters:callbackHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils07RequestB0C8downloadyXeXe_XeAA23DownloadCallbackHandlerCtcACF">download(url:parameters:callbackHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>下载请求</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URLConvertible</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">callbackHandler</span><span class="p">:</span> <span class="kt"><a href="../Classes/DownloadCallbackHandler.html">DownloadCallbackHandler</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:9HttpUtils19DownloadRequestTaska">DownloadRequestTask</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求网址</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求参数</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callbackHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>结果回调</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>下载任务字典</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils07RequestB0C015suspendDownloadC0yyXe_tcACmFZ"></a>
+                    <a name="//apple_ref/swift/Method/suspendDownloadRequest(url:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils07RequestB0C015suspendDownloadC0yyXe_tcACmFZ">suspendDownloadRequest(url:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>通过url暂停下载任务</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">suspendDownloadRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URLConvertible</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求网址</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils07RequestB0C014resumeDownloadC0yyXe_tcACmFZ"></a>
+                    <a name="//apple_ref/swift/Method/resumeDownloadRequest(url:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils07RequestB0C014resumeDownloadC0yyXe_tcACmFZ">resumeDownloadRequest(url:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>通过url继续下载任务</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">resumeDownloadRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URLConvertible</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求网址</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils07RequestB0C014cancelDownloadC0yyXe_tcACmFZ"></a>
+                    <a name="//apple_ref/swift/Method/cancelDownloadRequest(url:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils07RequestB0C014cancelDownloadC0yyXe_tcACmFZ">cancelDownloadRequest(url:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>通过url取消下载任务</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">cancelDownloadRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URLConvertible</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求网址</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-06-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

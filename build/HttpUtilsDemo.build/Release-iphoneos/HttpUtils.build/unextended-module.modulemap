@@ -1,0 +1,10 @@
+framework module HttpUtils {
+  umbrella header "HttpUtils.h"
+
+  export *
+  module * { export * }
+}
+
+module HttpUtils.__Swift {
+    exclude header "HttpUtils-Swift.h"
+}

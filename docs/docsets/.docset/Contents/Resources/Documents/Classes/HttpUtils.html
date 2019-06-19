@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HttpUtils Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/HttpUtils" class="dashAnchor"></a>
+    <a title="HttpUtils Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (75% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        HttpUtils Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DownloadCallbackHandler.html">DownloadCallbackHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpConfig.html">HttpConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpConfig/Builder.html">– Builder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpUtils.html">HttpUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpUtils/CacheManager.html">– CacheManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpUtils/OtherError.html">– OtherError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkListener.html">NetworkListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkLogger.html">NetworkLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RequestUtils.html">RequestUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TrustPolicyManager.html">TrustPolicyManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UploadCallbackHandler.html">UploadCallbackHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/HttpsServerTrustPolicy.html">HttpsServerTrustPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MimeType.html">MimeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NetworkLoggerLevel.html">NetworkLoggerLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NetworkType.html">NetworkType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ResponseResult.html">ResponseResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ResponseResult/Success.html">– Success</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ResponseResult/Failure.html">– Failure</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/DataRequest.html">DataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ConfigProtocol.html">ConfigProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HUDProtocol.html">HUDProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ProcessProtocol.html">ProcessProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Adapter.html">Adapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Adapter/Config.html">– Config</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Adapter/HUD.html">– HUD</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Adapter/Process.html">– Process</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils23DownloadFailureCallbacka">DownloadFailureCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils24DownloadProgressCallbacka">DownloadProgressCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils19DownloadRequestTaska">DownloadRequestTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils23DownloadSuccessCallbacka">DownloadSuccessCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils20ResponseResultHandlea">ResponseResultHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils22UploadProgressCallbacka">UploadProgressCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils20UploadResultCallbacka">UploadResultCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils12UploadStreama">UploadStream</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>HttpUtils</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">HttpUtils</span></code></pre>
+
+                </div>
+              </div>
+            <p>网络请求单元</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtilsAAC7requestyyXe_XeXeXeXeXeAA7AdapterVyAA14ResponseResultOyxGctcABmSeRzSERzlFZ"></a>
+                    <a name="//apple_ref/swift/Method/request(sessionManager:method:url:parameters:encoding:headers:adapter:responseResultHandle:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtilsAAC7requestyyXe_XeXeXeXeXeAA7AdapterVyAA14ResponseResultOyxGctcABmSeRzSERzlFZ">request(sessionManager:method:url:parameters:encoding:headers:adapter:responseResultHandle:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>基本请求</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">request</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">Codable</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">sessionManager</span><span class="p">:</span> <span class="kt">SessionManager</span> <span class="o">=</span> <span class="kt">SessionManager</span><span class="o">.</span><span class="k">default</span><span class="p">,</span>
+                                       <span class="nv">method</span><span class="p">:</span> <span class="kt">HTTPMethod</span><span class="p">,</span>
+                                       <span class="nv">url</span><span class="p">:</span> <span class="kt">URLConvertible</span><span class="p">,</span>
+                                       <span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                       <span class="nv">encoding</span><span class="p">:</span> <span class="kt">ParameterEncoding</span> <span class="o">=</span> <span class="kt">URLEncoding</span><span class="o">.</span><span class="k">default</span><span class="p">,</span>
+                                       <span class="nv">headers</span><span class="p">:</span> <span class="kt">HTTPHeaders</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                       <span class="nv">adapter</span><span class="p">:</span> <span class="kt"><a href="../Structs/Adapter.html">Adapter</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/Adapter.html">Adapter</a></span><span class="o">.</span><span class="k">default</span><span class="p">,</span>
+                                       <span class="nv">responseResultHandle</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:9HttpUtils20ResponseResultHandlea">ResponseResultHandle</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sessionManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Alamofire.SessionManager</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求方法</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求网址</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求字段</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>encoding</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求字段编码方式</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求头</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>adapter</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>配置器</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>responseResultHandle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>回调响应结果</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E7%BC%93%E5%AD%98%E6%9C%AC%E5%9C%B0%E5%8C%96%E5%A4%84%E7%90%86"></a>
+                <a name="//apple_ref/swift/Section/网络请求缓存本地化处理" class="dashAnchor"></a>
+                <a href="#/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E7%BC%93%E5%AD%98%E6%9C%AC%E5%9C%B0%E5%8C%96%E5%A4%84%E7%90%86">
+                  <h3 class="section-name">网络请求缓存本地化处理</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtilsAAC12CacheManagerC"></a>
+                    <a name="//apple_ref/swift/Class/CacheManager" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtilsAAC12CacheManagerC">CacheManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Classes/HttpUtils/CacheManager.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CacheManager</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtilsAAC10OtherErrorO"></a>
+                    <a name="//apple_ref/swift/Enum/OtherError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtilsAAC10OtherErrorO">OtherError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>信息类型</p>
+
+<ul>
+<li>networkNotReachable: 无网络</li>
+<li>writeJSONCacheFailed: 写入JSON缓存失败</li>
+<li>readJSONCacheFailed: 读取JSON缓存失败</li>
+<li>writeDownloadResumeDataFailed: 写入下载的ResumeData失败</li>
+</ul>
+
+                        <a href="../Classes/HttpUtils/OtherError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">OtherError</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E4%B8%8A%E4%BC%A0%E7%9A%84%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82"></a>
+                <a name="//apple_ref/swift/Section/上传的网络请求" class="dashAnchor"></a>
+                <a href="#/%E4%B8%8A%E4%BC%A0%E7%9A%84%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82">
+                  <h3 class="section-name">上传的网络请求</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtilsAAC10uploadDatayyXe_XeSDySS10Foundation0D0VGXeXeSo6CGSizeVSgAA8MimeTypeOAA21UploadCallbackHandlerCtcABmFZ"></a>
+                    <a name="//apple_ref/swift/Method/uploadData(sessionManager:url:uploadStream:parameters:headers:size:mimeType:callbackHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtilsAAC10uploadDatayyXe_XeSDySS10Foundation0D0VGXeXeSo6CGSizeVSgAA8MimeTypeOAA21UploadCallbackHandlerCtcABmFZ">uploadData(sessionManager:url:uploadStream:parameters:headers:size:mimeType:callbackHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">uploadData</span><span class="p">(</span><span class="nv">sessionManager</span><span class="p">:</span> <span class="kt">SessionManager</span> <span class="o">=</span> <span class="kt">SessionManager</span><span class="o">.</span><span class="k">default</span><span class="p">,</span>
+                              <span class="nv">url</span><span class="p">:</span> <span class="kt">URLConvertible</span><span class="p">,</span>
+                              <span class="nv">uploadStream</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:9HttpUtils12UploadStreama">UploadStream</a></span><span class="p">,</span>
+                              <span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                              <span class="nv">headers</span><span class="p">:</span> <span class="kt">HTTPHeaders</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                              <span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                              <span class="nv">mimeType</span><span class="p">:</span> <span class="kt"><a href="../Enums/MimeType.html">MimeType</a></span><span class="p">,</span>
+                              <span class="nv">callbackHandler</span><span class="p">:</span> <span class="kt"><a href="../Classes/UploadCallbackHandler.html">UploadCallbackHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sessionManage</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Alamofire.SessionManager</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求网址</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uploadStream</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>上传的数据流</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求字段</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求头</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>size</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>文件的size 长宽</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mimeType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>文件类型 详细看FawMimeType枚举</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callbackHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>上传回调</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtilsAAC19uploadFromeFilePathyyXe_SSXeXeXeAA21UploadCallbackHandlerCtcABmFZ"></a>
+                    <a name="//apple_ref/swift/Method/uploadFromeFilePath(sessionManager:filePath:to:method:headers:callbackHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtilsAAC19uploadFromeFilePathyyXe_SSXeXeXeAA21UploadCallbackHandlerCtcABmFZ">uploadFromeFilePath(sessionManager:filePath:to:method:headers:callbackHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>通过文件路径进行上传</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">uploadFromeFilePath</span><span class="p">(</span><span class="nv">sessionManager</span><span class="p">:</span> <span class="kt">SessionManager</span> <span class="o">=</span> <span class="kt">SessionManager</span><span class="o">.</span><span class="k">default</span><span class="p">,</span>
+                                       <span class="nv">filePath</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                                       <span class="n">to</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URLConvertible</span><span class="p">,</span>
+                                       <span class="nv">method</span><span class="p">:</span> <span class="kt">HTTPMethod</span> <span class="o">=</span> <span class="o">.</span><span class="n">post</span><span class="p">,</span>
+                                       <span class="nv">headers</span><span class="p">:</span> <span class="kt">HTTPHeaders</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                       <span class="nv">callbackHandler</span><span class="p">:</span> <span class="kt"><a href="../Classes/UploadCallbackHandler.html">UploadCallbackHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sessionManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Alamofire.SessionManager</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filePath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>文件路径字符串</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求网址</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求方法</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求头</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callbackHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>上传回调</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E4%B8%8B%E8%BD%BD%E7%9A%84%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82"></a>
+                <a name="//apple_ref/swift/Section/下载的网络请求" class="dashAnchor"></a>
+                <a href="#/%E4%B8%8B%E8%BD%BD%E7%9A%84%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82">
+                  <h3 class="section-name">下载的网络请求</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtilsAAC12downloadDatayXeXe_XeXeXeAA23DownloadCallbackHandlerCtcABmFZ"></a>
+                    <a name="//apple_ref/swift/Method/downloadData(sessionManager:url:parameters:headers:callbackHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtilsAAC12downloadDatayXeXe_XeXeXeAA23DownloadCallbackHandlerCtcABmFZ">downloadData(sessionManager:url:parameters:headers:callbackHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>文件下载</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">downloadData</span><span class="p">(</span><span class="nv">sessionManager</span><span class="p">:</span> <span class="kt">SessionManager</span> <span class="o">=</span> <span class="kt">SessionManager</span><span class="o">.</span><span class="k">default</span><span class="p">,</span>
+                                <span class="nv">url</span><span class="p">:</span> <span class="kt">URLConvertible</span><span class="p">,</span>
+                                <span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                <span class="nv">headers</span><span class="p">:</span> <span class="kt">HTTPHeaders</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                <span class="nv">callbackHandler</span><span class="p">:</span> <span class="kt"><a href="../Classes/DownloadCallbackHandler.html">DownloadCallbackHandler</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:9HttpUtils19DownloadRequestTaska">DownloadRequestTask</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sessionManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Alamofire.SessionManage</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求网址</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求字段</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求头</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callbackHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>下载回调</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>下载任务字典</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E5%AD%98%E5%82%A8%E4%B8%8B%E8%BD%BD%E4%BB%BB%E5%8A%A1%E7%9A%84%E5%AD%97%E5%85%B8%20%E7%94%A8%E4%BA%8E%E9%80%9A%E8%BF%87url%E8%8E%B7%E5%8F%96%E4%B8%8B%E8%BD%BD%E4%BB%BB%E5%8A%A1%20%E8%BF%9B%E8%80%8C%E8%BF%9B%E8%A1%8C%E6%9A%82%E5%81%9C/%E6%81%A2%E5%A4%8D/%E5%8F%96%E6%B6%88%E7%AD%89%E6%93%8D%E4%BD%9C"></a>
+                <a name="//apple_ref/swift/Section/存储下载任务的字典 用于通过url获取下载任务 进而进行暂停/恢复/取消等操作" class="dashAnchor"></a>
+                <a href="#/%E5%AD%98%E5%82%A8%E4%B8%8B%E8%BD%BD%E4%BB%BB%E5%8A%A1%E7%9A%84%E5%AD%97%E5%85%B8%20%E7%94%A8%E4%BA%8E%E9%80%9A%E8%BF%87url%E8%8E%B7%E5%8F%96%E4%B8%8B%E8%BD%BD%E4%BB%BB%E5%8A%A1%20%E8%BF%9B%E8%80%8C%E8%BF%9B%E8%A1%8C%E6%9A%82%E5%81%9C/%E6%81%A2%E5%A4%8D/%E5%8F%96%E6%B6%88%E7%AD%89%E6%93%8D%E4%BD%9C">
+                  <h3 class="section-name">存储下载任务的字典 用于通过url获取下载任务 进而进行暂停/恢复/取消等操作</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtilsAAC19downloadRequestTaskXevpZ"></a>
+                    <a name="//apple_ref/swift/Variable/downloadRequestTask" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtilsAAC19downloadRequestTaskXevpZ">downloadRequestTask</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">downloadRequestTask</span><span class="p">:</span> <span class="o">&lt;&lt;</span><span class="n">error</span> <span class="n">type</span><span class="o">&gt;&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtilsAAC22suspendDownloadRequestyyXe_tcABmFZ"></a>
+                    <a name="//apple_ref/swift/Method/suspendDownloadRequest(url:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtilsAAC22suspendDownloadRequestyyXe_tcABmFZ">suspendDownloadRequest(url:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>通过url暂停下载任务</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">suspendDownloadRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URLConvertible</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求网址</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtilsAAC21resumeDownloadRequestyyXe_tcABmFZ"></a>
+                    <a name="//apple_ref/swift/Method/resumeDownloadRequest(url:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtilsAAC21resumeDownloadRequestyyXe_tcABmFZ">resumeDownloadRequest(url:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>通过url继续下载任务</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">resumeDownloadRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URLConvertible</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求网址</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtilsAAC21cancelDownloadRequestyyXe_tcABmFZ"></a>
+                    <a name="//apple_ref/swift/Method/cancelDownloadRequest(url:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtilsAAC21cancelDownloadRequestyyXe_tcABmFZ">cancelDownloadRequest(url:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>通过url取消下载任务</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">cancelDownloadRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URLConvertible</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>请求网址</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E5%A4%84%E7%90%86CA%E8%AF%81%E4%B9%A6%E7%9B%B8%E5%85%B3"></a>
+                <a name="//apple_ref/swift/Section/处理CA证书相关" class="dashAnchor"></a>
+                <a href="#/%E5%A4%84%E7%90%86CA%E8%AF%81%E4%B9%A6%E7%9B%B8%E5%85%B3">
+                  <h3 class="section-name">处理CA证书相关</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtilsAAC9challengeyyXe_AA22HttpsServerTrustPolicyOS2StcABmFZ"></a>
+                    <a name="//apple_ref/swift/Method/challenge(sessionManage:trustPolicy:p12Path:p12password:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtilsAAC9challengeyyXe_AA22HttpsServerTrustPolicyOS2StcABmFZ">challenge(sessionManage:trustPolicy:p12Path:p12password:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>设置SessionManager.main的CA证书</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">challenge</span><span class="p">(</span><span class="nv">sessionManage</span><span class="p">:</span> <span class="kt">SessionManager</span><span class="p">,</span> <span class="nv">trustPolicy</span><span class="p">:</span> <span class="kt"><a href="../Enums/HttpsServerTrustPolicy.html">HttpsServerTrustPolicy</a></span><span class="p">,</span> <span class="nv">p12Path</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">p12password</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sessionManage</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Alamofire.SessionManage</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>trustPolicy</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>服务器的认证策略</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>p12Path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>p12证书路径</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>p12证书的密码</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-06-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

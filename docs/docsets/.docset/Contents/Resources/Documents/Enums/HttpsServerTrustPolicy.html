@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HttpsServerTrustPolicy Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/HttpsServerTrustPolicy" class="dashAnchor"></a>
+    <a title="HttpsServerTrustPolicy Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (75% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        HttpsServerTrustPolicy Enumeration Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DownloadCallbackHandler.html">DownloadCallbackHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpConfig.html">HttpConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpConfig/Builder.html">– Builder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpUtils.html">HttpUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpUtils/CacheManager.html">– CacheManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HttpUtils/OtherError.html">– OtherError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkListener.html">NetworkListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkLogger.html">NetworkLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RequestUtils.html">RequestUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TrustPolicyManager.html">TrustPolicyManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UploadCallbackHandler.html">UploadCallbackHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/HttpsServerTrustPolicy.html">HttpsServerTrustPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MimeType.html">MimeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NetworkLoggerLevel.html">NetworkLoggerLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NetworkType.html">NetworkType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ResponseResult.html">ResponseResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ResponseResult/Success.html">– Success</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ResponseResult/Failure.html">– Failure</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/DataRequest.html">DataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ConfigProtocol.html">ConfigProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HUDProtocol.html">HUDProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ProcessProtocol.html">ProcessProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Adapter.html">Adapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Adapter/Config.html">– Config</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Adapter/HUD.html">– HUD</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Adapter/Process.html">– Process</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils23DownloadFailureCallbacka">DownloadFailureCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils24DownloadProgressCallbacka">DownloadProgressCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils19DownloadRequestTaska">DownloadRequestTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils23DownloadSuccessCallbacka">DownloadSuccessCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils20ResponseResultHandlea">ResponseResultHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils22UploadProgressCallbacka">UploadProgressCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils20UploadResultCallbacka">UploadResultCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9HttpUtils12UploadStreama">UploadStream</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>HttpsServerTrustPolicy</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">HttpsServerTrustPolicy</span></code></pre>
+
+                </div>
+              </div>
+            <p>服务器认证策略,你没有看错,我就是从Alamofire的ServerTrustPolicy基本拷贝了一份过来,因为我需要的通过路径去找CA证书,其实完全是可以使用原来的枚举的,可惜枚举不能继承</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils22HttpsServerTrustPolicyO24performDefaultEvaluationyACSb_tcACmF"></a>
+                    <a name="//apple_ref/swift/Element/performDefaultEvaluation(validateHost:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils22HttpsServerTrustPolicyO24performDefaultEvaluationyACSb_tcACmF">performDefaultEvaluation(validateHost:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">performDefaultEvaluation</span><span class="p">(</span><span class="nv">validateHost</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils22HttpsServerTrustPolicyO24performRevokedEvaluationyACSb_SutcACmF"></a>
+                    <a name="//apple_ref/swift/Element/performRevokedEvaluation(validateHost:revocationFlags:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils22HttpsServerTrustPolicyO24performRevokedEvaluationyACSb_SutcACmF">performRevokedEvaluation(validateHost:revocationFlags:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">performRevokedEvaluation</span><span class="p">(</span><span class="nv">validateHost</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">revocationFlags</span><span class="p">:</span> <span class="kt">CFOptionFlags</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils22HttpsServerTrustPolicyO15pinCertificatesyACSS_S2btcACmF"></a>
+                    <a name="//apple_ref/swift/Element/pinCertificates(cerPath:validateCertificateChain:validateHost:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils22HttpsServerTrustPolicyO15pinCertificatesyACSS_S2btcACmF">pinCertificates(cerPath:validateCertificateChain:validateHost:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">pinCertificates</span><span class="p">(</span><span class="nv">cerPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">validateCertificateChain</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">validateHost</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils22HttpsServerTrustPolicyO13pinPublicKeysyACSS_S2btcACmF"></a>
+                    <a name="//apple_ref/swift/Element/pinPublicKeys(cerPath:validateCertificateChain:validateHost:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils22HttpsServerTrustPolicyO13pinPublicKeysyACSS_S2btcACmF">pinPublicKeys(cerPath:validateCertificateChain:validateHost:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">pinPublicKeys</span><span class="p">(</span><span class="nv">cerPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">validateCertificateChain</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">validateHost</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils22HttpsServerTrustPolicyO17disableEvaluationyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/disableEvaluation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils22HttpsServerTrustPolicyO17disableEvaluationyA2CmF">disableEvaluation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">disableEvaluation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils22HttpsServerTrustPolicyO16customEvaluationyACSbSo03SecE3Refa_SStccACmF"></a>
+                    <a name="//apple_ref/swift/Element/customEvaluation(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils22HttpsServerTrustPolicyO16customEvaluationyACSbSo03SecE3Refa_SStccACmF">customEvaluation(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">customEvaluation</span><span class="p">((</span><span class="n">_</span> <span class="nv">serverTrust</span><span class="p">:</span> <span class="kt">SecTrust</span><span class="p">,</span> <span class="n">_</span> <span class="nv">host</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils22HttpsServerTrustPolicyO7managerXevpZ"></a>
+                    <a name="//apple_ref/swift/Variable/manager" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils22HttpsServerTrustPolicyO7managerXevpZ">manager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>全局的服务器认证策略管理器</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt">ServerTrustPolicyManager</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils22HttpsServerTrustPolicyO7defaultACSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/default" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils22HttpsServerTrustPolicyO7defaultACSgvpZ">default</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>全局的服务器默认认证策略</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">var</span> <span class="err">`</span><span class="k">default</span><span class="err">`</span><span class="p">:</span> <span class="kt">HttpsServerTrustPolicy</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils22HttpsServerTrustPolicyO12certificates2inSaySo17SecCertificateRefaGSo8NSBundleC_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/certificates(in:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils22HttpsServerTrustPolicyO12certificates2inSaySo17SecCertificateRefaGSo8NSBundleC_tFZ">certificates(in:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>获取App中的Bundle里的所有SecCertificate</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">certificates</span><span class="p">(</span><span class="k">in</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">SecCertificate</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bundle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Bundle的路径</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>SecCertificate数组</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils22HttpsServerTrustPolicyO10publicKeys2inSaySo9SecKeyRefaGSo8NSBundleC_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/publicKeys(in:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils22HttpsServerTrustPolicyO10publicKeys2inSaySo9SecKeyRefaGSo8NSBundleC_tFZ">publicKeys(in:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>获取App中的Bundle里的所有SecKey</p>
+
+                        <a href="../Enums/HttpsServerTrustPolicy/publicKeys(in:).html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">publicKeys</span><span class="p">(</span><span class="k">in</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">SecKey</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bundle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Bundle的路径</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>SecKey数组</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9HttpUtils22HttpsServerTrustPolicyO8evaluate_7forHostSbSo03SecE3Refa_SStF"></a>
+                    <a name="//apple_ref/swift/Method/evaluate(_:forHost:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9HttpUtils22HttpsServerTrustPolicyO8evaluate_7forHostSbSo03SecE3Refa_SStF">evaluate(_:forHost:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>与服务端进行验证</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">evaluate</span><span class="p">(</span><span class="n">_</span> <span class="nv">serverTrust</span><span class="p">:</span> <span class="kt">SecTrust</span><span class="p">,</span> <span class="n">forHost</span> <span class="nv">host</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>serverTrust</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>SecTrust</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>host</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>host</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>验证结果</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-06-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
