@@ -21,19 +21,37 @@ public enum ResponseResult<T> {
     
     /// 成功的结构
     public struct Success {
-        var codableModel: T?
-        var data: Data?
-        var jsonString: String?
-        var httpURLResponse: HTTPURLResponse?
+        
+        /// Codable转模型
+        public var codableModel: T?
+        
+        /// 原始数据
+        public var data: Data?
+        
+        /// 字符串
+        public var jsonString: String?
+        
+        /// HTTPURLResponse
+        public var httpURLResponse: HTTPURLResponse?
     }
     
     /// 失败的结构体
     public struct Failure {
-        var cache: T?
-        var data: Data?
-        var otherError: HttpUtils.OtherError?
-        var error: Error?
-        var httpURLResponse: HTTPURLResponse?
+        
+        /// 缓存的模型数据
+        public var cache: T?
+        
+        /// 原始数据
+        public var data: Data?
+        
+        /// 其他错误
+        public var otherError: HttpUtils.OtherError?
+        
+        /// 请求错误
+        public var error: Error?
+        
+        /// HTTPURLResponse
+        public var httpURLResponse: HTTPURLResponse?
     }
 }
 
