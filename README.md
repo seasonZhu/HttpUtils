@@ -1,0 +1,2 @@
+# HttpUtils
+基于Alamofire和Codable协议的封装,是从ZDHttpUtilsDemo中独立出来的模块
