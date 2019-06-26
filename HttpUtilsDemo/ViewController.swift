@@ -31,6 +31,11 @@ class ViewController: UIViewController {
          打包脚本
          fastlane pg version:1.0.0 build:10 scheme:ZDHttpUtilsDemo displayName:HttpUtils mode:Debug/Release/Sit/Sit-Release changelog:打包测试
          */
+        
+        /// Github中Swift点星星最多的工程
+        HttpUtils.request(sessionManager: SessionManager.default, method: .get, url: "https://api.github.com/search/repositories?q=language:swift&sort=stars") { (result: ResponseResult<GitMostStarred>) in
+            print(result.model)
+        }
     }
     
     //MARK:- 搭建界面

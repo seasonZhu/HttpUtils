@@ -36,6 +36,7 @@
 		61707DFE22BA016B00C37555 /* HttpUtils+Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61707DEC22BA016B00C37555 /* HttpUtils+Indicator.swift */; };
 		61707E0022BA01E800C37555 /* CodableEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61707DFF22BA01E800C37555 /* CodableEntity.swift */; };
 		61707E0222BA020200C37555 /* CodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61707E0122BA020200C37555 /* CodableModel.swift */; };
+		61C0813622C206A900A50968 /* SwiftInGitHubMostStarred.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C0813522C206A900A50968 /* SwiftInGitHubMostStarred.swift */; };
 		EC0C22F3E570D8BB80EE92B3 /* Pods_HttpUtilsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A379BBA09E87568F14DD3A6 /* Pods_HttpUtilsDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		61707DEC22BA016B00C37555 /* HttpUtils+Indicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HttpUtils+Indicator.swift"; sourceTree = "<group>"; };
 		61707DFF22BA01E800C37555 /* CodableEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableEntity.swift; sourceTree = "<group>"; };
 		61707E0122BA020200C37555 /* CodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableModel.swift; sourceTree = "<group>"; };
+		61C0813522C206A900A50968 /* SwiftInGitHubMostStarred.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftInGitHubMostStarred.swift; sourceTree = "<group>"; };
 		AC05A3B9FB6AB2AF7CCFFA08 /* Pods-HttpUtils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HttpUtils.debug.xcconfig"; path = "Target Support Files/Pods-HttpUtils/Pods-HttpUtils.debug.xcconfig"; sourceTree = "<group>"; };
 		BB2BE5A2411FB0EB5A8520EC /* Pods-HttpUtilsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HttpUtilsDemo.debug.xcconfig"; path = "Target Support Files/Pods-HttpUtilsDemo/Pods-HttpUtilsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BB490B761C606FDC8C960097 /* Pods-HttpUtils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HttpUtils.release.xcconfig"; path = "Target Support Files/Pods-HttpUtils/Pods-HttpUtils.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				61707DB922BA00C200C37555 /* ViewController.swift */,
 				61707DFF22BA01E800C37555 /* CodableEntity.swift */,
 				61707E0122BA020200C37555 /* CodableModel.swift */,
+				61C0813522C206A900A50968 /* SwiftInGitHubMostStarred.swift */,
 				61707DBB22BA00C200C37555 /* Main.storyboard */,
 				61707DBE22BA00C400C37555 /* Assets.xcassets */,
 				61707DC022BA00C400C37555 /* LaunchScreen.storyboard */,
@@ -387,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61707E0222BA020200C37555 /* CodableModel.swift in Sources */,
+				61C0813622C206A900A50968 /* SwiftInGitHubMostStarred.swift in Sources */,
 				61707DBA22BA00C200C37555 /* ViewController.swift in Sources */,
 				61707E0022BA01E800C37555 /* CodableEntity.swift in Sources */,
 				61707DB822BA00C200C37555 /* AppDelegate.swift in Sources */,
