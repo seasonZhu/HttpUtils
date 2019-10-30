@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import UIKit
 
 /// 网络请求单元
 public class HttpUtils {

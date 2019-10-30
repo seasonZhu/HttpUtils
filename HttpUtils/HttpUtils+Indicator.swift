@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 //MARK:- 系统状态栏上的网络请求转圈
 extension HttpUtils {
