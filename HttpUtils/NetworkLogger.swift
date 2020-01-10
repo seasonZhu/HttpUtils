@@ -112,20 +112,25 @@ private extension NetworkLogger {
         switch level {
         case .debug:
             logDivider()
-            
-            print("\(httpMethod) '\(requestURL.absoluteString)':")
+            print("Request:")
+            print("method:\(httpMethod)")
+            print("url:\(requestURL.absoluteString)")
             
             if let httpHeadersFields = request.allHTTPHeaderFields {
                 logHeaders(headers: httpHeadersFields)
             }
             
             if let httpBody = request.httpBody, let httpBodyString = String(data: httpBody, encoding: .utf8) {
-                print(httpBodyString)
+                print("body:\(httpBodyString)")
             }
+            logDivider()
         case .info:
             logDivider()
             
-            print("\(httpMethod) '\(requestURL.absoluteString)'")
+            print("Request:")
+            print("method:\(httpMethod)")
+            print("url:\(requestURL.absoluteString)")
+            logDivider()
         default:
             break
         }
@@ -158,12 +163,19 @@ private extension NetworkLogger {
         }
         
         if let error = task.error {
+            guard let response = task.response as? HTTPURLResponse else {
+                return
+            }
             switch level {
             case .debug, .info, .warn, .error:
                 logDivider()
-                
-                print("[Error] \(httpMethod) '\(requestURL.absoluteString)' [\(String(format: "%.04f", elapsedTime)) s]:")
+                print("Response:")
+                print("method:\(httpMethod)")
+                print("statusCode:\(response.statusCode)")
+                print("url:\(requestURL.absoluteString)")
+                print("elapsedTime:\(String(format: "%.04f", elapsedTime)) s:")
                 print(error)
+                logDivider()
             default:
                 break
             }
@@ -175,29 +187,41 @@ private extension NetworkLogger {
             switch level {
             case .debug:
                 logDivider()
-                
-                print("\(String(response.statusCode)) '\(requestURL.absoluteString)' [\(String(format: "%.04f", elapsedTime)) s]:")
-                
+                print("Response:")
+                print("method:\(httpMethod)")
+                print("statusCode:\(response.statusCode)")
+                print("url:\(requestURL.absoluteString)")
+                print("elapsedTime:\(String(format: "%.04f", elapsedTime)) s:")
                 logHeaders(headers: response.allHeaderFields)
                 
-                guard let data = sessionDelegate[task]?.delegate.data else { break }
+                guard let data = sessionDelegate[task]?.delegate.data else {
+                    logDivider()
+                    break
+                }
                 
                 do {
                     let jsonObject = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
                     let prettyData = try JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted)
                     
                     if let prettyString = String(data: prettyData, encoding: .utf8) {
+                        print("JSON:")
                         print(prettyString)
                     }
                 } catch {
                     if let string = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
+                        print("JSON:")
                         print(string)
                     }
                 }
+                logDivider()
             case .info:
                 logDivider()
-                
-                print("\(String(response.statusCode)) '\(requestURL.absoluteString)' [\(String(format: "%.04f", elapsedTime)) s]")
+                print("Response")
+                print("method:\(httpMethod)")
+                print("statusCode:\(response.statusCode)")
+                print("url:\(requestURL.absoluteString)")
+                print("elapsedTime:\(String(format: "%.04f", elapsedTime)) s:")
+                logDivider()
             default:
                 break
             }
@@ -206,17 +230,22 @@ private extension NetworkLogger {
     
     /// 打印"---------------------"
     func logDivider() {
-        print("---------------------")
+        print("------------------------------------------")
     }
     
     /// 打印请求头
     ///
     /// - Parameter headers: 请求头
     func logHeaders(headers: [AnyHashable : Any]) {
-        print("Headers: [")
-        for (key, value) in headers {
-            print("  \(key) : \(value)")
+        if headers.count == 0 {
+            print("Headers: []")
+        }else {
+            print("Headers: [")
+            for (key, value) in headers {
+                print("  \(key) : \(value)")
+            }
+            print("]")
         }
-        print("]")
+
     }
 }
