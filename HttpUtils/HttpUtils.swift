@@ -55,7 +55,9 @@ public class HttpUtils {
             //  网络的拦截
             if adapter.process.isNotReachableHandler {
                 // 展示网络拦截的弹窗
-                adapter.hud?.showNetworkStatus(status: NetworkListener.shared.status)
+                DispatchQueue.main.guardAsync {
+                    adapter.hud?.showNetworkStatus(status: NetworkListener.shared.status)
+                }
             }
 
             //  响应缓存
@@ -67,15 +69,19 @@ public class HttpUtils {
         }
         
         //  菊花转
-        indicatorRun()
-        adapter.hud?.showWait()
-        
+        DispatchQueue.main.guardAsync {
+            indicatorRun()
+            adapter.hud?.showWait()
+        }
+
         let dataRequset = sessionManager.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers).validate(statusCode: adapter.config.statusCodes ?? defaultStatusCodes).validate(contentType: adapter.config.contentTypes ?? defaultContentTypes)
         
         dataRequset.responseCodable(queue: adapter.config.queue, keyPath: adapter.config.keyPath) { (response: DataResponse<T>) in
             //  菊花转结束
-            indicatorStop()
-            adapter.hud?.clear()
+            DispatchQueue.main.async {
+                indicatorStop()
+                adapter.hud?.clear()
+            }
             
             //  后置拦截 打印漂亮的Json
             if adapter.process.isAfterHandler {
@@ -114,14 +120,18 @@ public class HttpUtils {
                 let success = ResponseResult.Success(codableModel: value, data: response.data, jsonString: jsonString, httpURLResponse: response.response)
                 responseResultHandle(.success(success))
                 if let successMessage = adapter.hud?.successMessage {
-                    adapter.hud?.showMessage(message: successMessage)
+                    DispatchQueue.main.guardAsync {
+                        adapter.hud?.showMessage(message: successMessage)
+                    }
                 }
                 
             //  响应失败
             case .failure(let error):
                 let failure = ResponseResult<T>.Failure(cache: nil, data: response.data, otherError: nil, error: error, httpURLResponse: response.response)
                 responseResultHandle(.failure(failure))
-                adapter.hud?.showError(error: error)
+                DispatchQueue.main.guardAsync {
+                    adapter.hud?.showError(error: error)
+                }
             }
         }
         
@@ -550,4 +560,19 @@ extension HttpUtils {
     
     ///  默认的ContentTypes校验
     private static let defaultContentTypes = ["*/*"]
+}
+
+//MARK:- GCD的守护异步
+extension DispatchQueue {
+    
+    /// 守护的异步
+    /// 脱离于Kingfisher DispatchQueue.main.guardAsync { } 注意这里的三个等号的使用看上面的注释
+    /// - Parameter callback: 回调
+    public func guardAsync(_ callback: @escaping () -> Void) {
+        if self === DispatchQueue.main && Thread.isMainThread {
+            callback()
+        } else {
+            async { callback() }
+        }
+    }
 }
