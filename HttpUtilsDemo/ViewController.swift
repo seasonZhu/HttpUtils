@@ -297,6 +297,29 @@ extension ViewController {
             print(progress)
         }))
     }
+
+    func operationQueueAction() {
+        let queue = OperationQueue()
+        
+        let operation1 = BlockOperation {
+            let adapter = Adapter(hud: Adapter.HUD())
+            HttpUtils.request(sessionManager: SessionManager.default, method: .post, url: "http://sun.topray-media.cn/tz_inf/api/topics", adapter: adapter) { (result: ResponseResult<ExampleModelName>) in
+                print(result.model)
+            }
+        }
+        
+        let operation2 = BlockOperation {
+            let adapter = Adapter(config: Adapter.Config(keyPath: "list"), hud: Adapter.HUD())
+            HttpUtils.request(sessionManager: SessionManager.default, method: .post, url: "http://sun.topray-media.cn/tz_inf/api/topics", adapter: adapter) { (result: ResponseResult<[ListItem]>) in
+                print(result.model)
+            }
+
+        }
+        
+        operation2.addDependency(operation1)
+        queue.addOperation(operation2)
+        queue.addOperation(operation1)
+    }
 }
 
 // MARK: - 按照文档写了一个认证策略管理器,完全都不能用
