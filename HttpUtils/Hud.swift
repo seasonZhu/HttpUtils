@@ -8,9 +8,8 @@
 
 import UIKit
 
-/*
- * 这本是一个对外的public类,是我自己写的,这里为了方便使用和避免冲突,私有化了
- */
+/// 这本是一个对外的public类,是我自己写的,这里为了方便使用和避免冲突,私有化了
+
 
 /// 自动完成后的回调
 typealias CompleteHandle = () -> Void

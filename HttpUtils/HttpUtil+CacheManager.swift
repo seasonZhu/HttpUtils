@@ -55,7 +55,7 @@ extension HttpUtils {
         }
         
         private static func addDoNotBackupAttribute(path: String) {
-            var url = URL.init(fileURLWithPath: path)
+            var url = URL(fileURLWithPath: path)
             url.setTemporaryResourceValue(true, forKey: URLResourceKey.isExcludedFromBackupKey)
         }
     }

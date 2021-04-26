@@ -65,14 +65,14 @@ public class NetworkLogger {
         
         notificationCenter.addObserver(
             self,
-            selector: #selector(NetworkLogger.networkRequestDidStart(notification:)),
+            selector: #selector(networkRequestDidStart(notification:)),
             name: Notification.Name.Task.DidResume,
             object: nil
         )
         
         notificationCenter.addObserver(
             self,
-            selector: #selector(NetworkLogger.networkRequestDidComplete(notification:)),
+            selector: #selector(networkRequestDidComplete(notification:)),
             name: Notification.Name.Task.DidComplete,
             object: nil
         )
@@ -112,24 +112,25 @@ private extension NetworkLogger {
         switch level {
         case .debug:
             logDivider()
-            print("Request:")
-            print("method:\(httpMethod)")
-            print("url:\(requestURL.absoluteString)")
+            print("Request")
+            print("Method:\(httpMethod)")
+            print("URL:\(requestURL.absoluteString)")
             
             if let httpHeadersFields = request.allHTTPHeaderFields {
                 logHeaders(headers: httpHeadersFields)
             }
             
             if let httpBody = request.httpBody, let httpBodyString = String(data: httpBody, encoding: .utf8) {
-                print("body:\(httpBodyString)")
+                print("Body:")
+                print(httpBodyString)
             }
             logDivider()
         case .info:
             logDivider()
             
-            print("Request:")
-            print("method:\(httpMethod)")
-            print("url:\(requestURL.absoluteString)")
+            print("Request")
+            print("Method:\(httpMethod)")
+            print("URL:\(requestURL.absoluteString)")
             logDivider()
         default:
             break
@@ -169,11 +170,11 @@ private extension NetworkLogger {
             switch level {
             case .debug, .info, .warn, .error:
                 logDivider()
-                print("Response:")
-                print("method:\(httpMethod)")
-                print("statusCode:\(response.statusCode)")
-                print("url:\(requestURL.absoluteString)")
-                print("elapsedTime:\(String(format: "%.04f", elapsedTime)) s:")
+                print("Response")
+                print("Method:\(httpMethod)")
+                print("StatusCode:\(response.statusCode)")
+                print("URL:\(requestURL.absoluteString)")
+                print("ElapsedTime:\(String(format: "%.04f", elapsedTime)) s:")
                 print(error)
                 logDivider()
             default:
@@ -187,11 +188,11 @@ private extension NetworkLogger {
             switch level {
             case .debug:
                 logDivider()
-                print("Response:")
-                print("method:\(httpMethod)")
-                print("statusCode:\(response.statusCode)")
-                print("url:\(requestURL.absoluteString)")
-                print("elapsedTime:\(String(format: "%.04f", elapsedTime)) s:")
+                print("Response")
+                print("Method:\(httpMethod)")
+                print("StatusCode:\(response.statusCode)")
+                print("URL:\(requestURL.absoluteString)")
+                print("ElapsedTime:\(String(format: "%.04f", elapsedTime)) s:")
                 logHeaders(headers: response.allHeaderFields)
                 
                 guard let data = sessionDelegate[task]?.delegate.data else {
@@ -217,10 +218,10 @@ private extension NetworkLogger {
             case .info:
                 logDivider()
                 print("Response")
-                print("method:\(httpMethod)")
-                print("statusCode:\(response.statusCode)")
-                print("url:\(requestURL.absoluteString)")
-                print("elapsedTime:\(String(format: "%.04f", elapsedTime)) s:")
+                print("Method:\(httpMethod)")
+                print("StatusCode:\(response.statusCode)")
+                print("URL:\(requestURL.absoluteString)")
+                print("ElapsedTime:\(String(format: "%.04f", elapsedTime)) s:")
                 logDivider()
             default:
                 break

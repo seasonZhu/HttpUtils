@@ -90,9 +90,9 @@ extension RequestUtils {
     ///   - parameters: 请求参数
     ///   - interceptHandle: 拦截回调
     ///   - callbackHandler: 结果回调
-    public func request<T: Codable>(method: HTTPMethod? = nil, url: URLConvertible, parameters: Parameters? = nil, adapter: Adapter = Adapter.default, responseResultHandle: @escaping ResponseResultHandle<T>) {
+    public func request<T: Codable>(method: HTTPMethod? = nil, url: URLConvertible, parameters: Parameters? = nil, encoding: ParameterEncoding = URLEncoding.default, adapter: Adapter = Adapter.default, responseResultHandle: @escaping ResponseResultHandle<T>) {
         /// 自定义的请求
-        HttpUtils.request(sessionManager: sessionManager, method: method ?? httpConfig.requestType, url: url, parameters: parameters, headers: headers, adapter: adapter, responseResultHandle: responseResultHandle)
+        HttpUtils.request(sessionManager: sessionManager, method: method ?? httpConfig.requestType, url: url, parameters: parameters, encoding: encoding, headers: headers, adapter: adapter, responseResultHandle: responseResultHandle)
     }
     
     /// get请求
@@ -102,8 +102,8 @@ extension RequestUtils {
     ///   - parameters: 请求参数
     ///   - interceptHandle: 拦截回调
     ///   - callbackHandler: 结果回调
-    public func get<T: Codable>(url: URLConvertible, parameters: Parameters? = nil, adapter: Adapter = Adapter.default, responseResultHandle: @escaping ResponseResultHandle<T>) {
-        HttpUtils.request(sessionManager: sessionManager, method: .get, url: url, parameters: parameters, headers: headers, adapter: adapter, responseResultHandle: responseResultHandle)
+    public func get<T: Codable>(url: URLConvertible, parameters: Parameters? = nil, encoding: ParameterEncoding = URLEncoding.default, adapter: Adapter = Adapter.default, responseResultHandle: @escaping ResponseResultHandle<T>) {
+        HttpUtils.request(sessionManager: sessionManager, method: .get, url: url, parameters: parameters, encoding: encoding, headers: headers, adapter: adapter, responseResultHandle: responseResultHandle)
     }
     
     /// post请求
@@ -113,8 +113,8 @@ extension RequestUtils {
     ///   - parameters: 请求参数
     ///   - interceptHandle: 拦截回调
     ///   - callbackHandler: 结果回调
-    public func post<T: Codable>(url: URLConvertible, parameters: Parameters? = nil, adapter: Adapter = Adapter.default, responseResultHandle: @escaping ResponseResultHandle<T>) {
-        HttpUtils.request(sessionManager: sessionManager, method: .post, url: url, parameters: parameters, headers: headers, adapter: adapter, responseResultHandle: responseResultHandle)
+    public func post<T: Codable>(url: URLConvertible, parameters: Parameters? = nil, encoding: ParameterEncoding = URLEncoding.default, adapter: Adapter = Adapter.default, responseResultHandle: @escaping ResponseResultHandle<T>) {
+        HttpUtils.request(sessionManager: sessionManager, method: .post, url: url, parameters: parameters, encoding: encoding, headers: headers, adapter: adapter, responseResultHandle: responseResultHandle)
     }
 }
 

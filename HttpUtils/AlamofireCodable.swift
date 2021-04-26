@@ -9,9 +9,7 @@
 import Foundation
 import Alamofire
 
-/*
- 有关AlamofireCodable的使用请详细参看: https://github.com/seasonZhu/AlamofireCodable 里面也有一些涉及Coswift的使用
- */
+/// 有关AlamofireCodable的使用请详细参看: https://github.com/seasonZhu/AlamofireCodable 里面也有一些涉及Coswift的使用
 
 // MARK: - Codable
 extension Request {
